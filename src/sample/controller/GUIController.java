@@ -1,10 +1,17 @@
 package sample.controller;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+
 import java.util.*;
+import java.util.List;
 
-public class Controller {
+public class GUIController {
 
-    public static List<Integer> GeneratePrime(int n) {
+    @FXML private TextField limit;
+
+    public List<Integer> generatePrimes() {
+        int n = Integer.parseInt(limit.getText());
         List<Integer> primeNumbers = new LinkedList<>();
         if (n >= 2) {
             primeNumbers.add(2);
@@ -14,10 +21,15 @@ public class Controller {
                 primeNumbers.add(i);
             }
         }
+        for (int i : primeNumbers
+             ) {
+            System.out.println(i);
+
+        }
         return primeNumbers;
     }
 
-    private static boolean isPrime(int number) {
+    private boolean isPrime(int number) {
         for (int i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
                 return false;
@@ -25,6 +37,8 @@ public class Controller {
         }
         return true;
     }
+
+
 }
 
 

@@ -10,10 +10,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../view/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../view/GUI.fxml"));
         primaryStage.setTitle("Prime Number Generator");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
+        GUIController guiController = new GUIController();
     }
 
 
