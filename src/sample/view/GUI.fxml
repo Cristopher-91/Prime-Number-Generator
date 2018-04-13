@@ -20,5 +20,6 @@
       </Label>
       <TextField id="limit" fx:id="limit" layoutX="76.0" layoutY="146.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
       <Button id="generatePrimes" fx:id="generatePrimes" layoutX="123.0" layoutY="207.0" mnemonicParsing="false" onAction="#generatePrimes" text="Button" AnchorPane.leftAnchor="123.0" AnchorPane.rightAnchor="123.0" />
+      <Label fx:id="wrongInput" alignment="CENTER" layoutX="86.0" layoutY="259.0" prefHeight="18.0" prefWidth="131.0" textFill="red" />
    </children>
 </AnchorPane>
